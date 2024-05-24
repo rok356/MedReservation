@@ -20,3 +20,6 @@ Demonstration of an ASP.NET Web API application built using Entity Framework and
 
 ## Adding Initial Data to the Database
 For the initial setup, I've included a script to populate some sample data into the tables. This script will automatically run the first time the application is launched, ensuring the database is populated with necessary data for testing and development purposes.
+
+## Testing the Application
+To facilitate easy testing of the API, a Postman collection named `MedReservation.postman_collection` is included. This collection provides a convenient way to interact with the API endpoints, allowing you to perform various operations such as creating appointments, managing patient-doctor interactions, and more.
