@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "4be5672c-3e57-4cad-96cb-a8288ecde035",
+		"name": "MedReservation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11154582"
+	},
+	"item": [
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"FirstName\": \"Roktzz5ttt84\",\r\n  \"LastName\": \"Doe\",\r\n  \"Specialization\": \"Cardiology\",\r\n  \"WorkingHours\": \"Standard\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"FirstName\": \"Roktzz5ttt84\",\r\n  \"LastName\": \"Doe\",\r\n  \"Specialization\": \"Cardiology\",\r\n  \"WorkingHours\": \"Standard\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/delete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserved Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/reserved-appointments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"reserved-appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Appointments",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OldAppointmentId\": 10,\r\n    \"NewAppointmentId\": 20,\r\n    \"PatientId\": 1,\r\n    \"DoctorId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/change-appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"change-appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AppointmentId\": 20,\r\n    \"DoctorId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/doctor/cancel-appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"doctor",
+								"cancel-appointment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Doctor Reserved Appointments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startDate\": \"2024-05-01T00:00:00\",\r\n    \"endDate\": \"2024-05-31T23:59:59\",\r\n    \"PatientId\": 1,\r\n    \"DoctorId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/patient/doctor-reserved-appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"doctor-reserved-appointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"FirstName\": \"Rok434\",\r\n  \"LastName\": \"Doe\",\r\n  \"Email\": \"email@email.com\",\r\n  \"PhoneNumber\": \"+386 44 000 444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/patient/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Doctor's Free Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/patient/doctor-free-appointments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"doctor-free-appointments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PatientId\": 1,\r\n    \"AppointmentId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/patient/reserve-appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"reserve-appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PatientId\": 2,\r\n    \"AppointmentId\": 120\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5216/api/patient/cancel-appointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"cancel-appointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all doctors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5216/api/patient/all-doctors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5216",
+							"path": [
+								"api",
+								"patient",
+								"all-doctors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
